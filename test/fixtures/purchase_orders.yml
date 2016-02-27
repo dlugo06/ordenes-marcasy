@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  link: MyString
+  notas: MyText
+  numero_order: 1
+  costo_total: 9.99
+  tipo_de_pago: MyString
+  cliente_id: 
+
+two:
+  link: MyString
+  notas: MyText
+  numero_order: 1
+  costo_total: 9.99
+  tipo_de_pago: MyString
+  cliente_id: 
