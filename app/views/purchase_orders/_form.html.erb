@@ -26,6 +26,7 @@
   <div class="field">
     <%= f.label :tipo_de_pago %><br>
     <%= f.select :tipo_de_pago, [["Credito 15 Dias"], ["Contado(COD)"]] %>
+
   </div>
   <div class="field">
     <%= f.label :costo_total %><br>
@@ -35,6 +36,13 @@
     <%= f.label :notas %><br>
     <%= f.text_area :notas %>
   </div>
+  <!-- <div class="field">
+    <%#= f.label :status %><br>
+    <%#= f.radio_button :status, "Recibida" %> Recibida <br>
+    <%#= f.radio_button :status, "Ordenada" %> Ordenada <br>
+    <%#= f.radio_button :status, "Transito" %> Transito <br>
+    <%#= f.radio_button :status, "Lista Para Entrega" %> Lista Para Entrega
+  </div> -->
   <div class="actions">
     <%= f.submit "Crear Order de Compra" %>
   </div>

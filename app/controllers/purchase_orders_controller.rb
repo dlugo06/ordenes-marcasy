@@ -1,5 +1,6 @@
 class PurchaseOrdersController < ApplicationController
   before_action :set_purchase_order, only: [:show, :edit, :update, :destroy]
+  # before_action :set_initial_status, only: :create
 
   # GET /purchase_orders
   # GET /purchase_orders.json
@@ -24,11 +25,12 @@ class PurchaseOrdersController < ApplicationController
   # POST /purchase_orders
   # POST /purchase_orders.json
   def create
+    # raise
     @purchase_order = PurchaseOrder.new(purchase_order_params)
 
     respond_to do |format|
       if @purchase_order.save
-        format.html { redirect_to @purchase_order, notice: 'Purchase order was successfully created.' }
+        format.html { redirect_to @purchase_order, notice: 'Orden de compra exitosamente creada.' }
         format.json { render :show, status: :created, location: @purchase_order }
       else
         format.html { render :new }
@@ -69,6 +71,6 @@ class PurchaseOrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def purchase_order_params
-      params.require(:purchase_order).permit(:link, :notas, :numero_order, :costo_total, :tipo_de_pago, :cliente_id)
+      params.require(:purchase_order).permit(:link, :notas, :numero_order, :costo_total, :tipo_de_pago, :cliente_id, :status)
     end
 end
