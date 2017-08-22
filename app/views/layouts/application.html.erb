@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= link_to('Admin Log Out', destroy_admin_session_path, method: :delete, class: "log-out") %>
+  <%= link_to('Cliente Log Out', destroy_cliente_session_path, method: :delete, class: "log-out") %>
 
 <%= yield %>
+
 
 </body>
 </html>

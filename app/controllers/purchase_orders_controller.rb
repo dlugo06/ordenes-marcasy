@@ -1,6 +1,6 @@
 class PurchaseOrdersController < ApplicationController
   before_action :set_purchase_order, only: [:show, :edit, :update, :destroy]
-  # before_action :set_initial_status, only: :create
+  # before_filter :authenticate_cliente!
 
   # GET /purchase_orders
   # GET /purchase_orders.json
@@ -16,6 +16,7 @@ class PurchaseOrdersController < ApplicationController
   # GET /purchase_orders/new
   def new
     @purchase_order = PurchaseOrder.new
+
   end
 
   # GET /purchase_orders/1/edit
